@@ -12,7 +12,7 @@ This app utilizes TheCocktailDB; details are here: https://www.thecocktaildb.com
 
 **** PART A: FETCH DATA 
 
-1. In the <head> of index.html, un-comment the <script> element so your page can access the JavaScript code.
+1. In the <head> of index.html, un-comment the <script> element so your page can access the JavaScript code. - DONE
 
 2. At the very top of scripts.js, initialize three empty arrays called categories, allDrinks, and currentDrinks.
 

@@ -6,6 +6,9 @@
 
 /** GLOBAL VARIABLES **/
 // TODO: initialize three empty arrays (see Part A, 2)
+let categories = [];
+let allDrinks = [];
+let currentDrinks = [];
 
 let colorClasses = {
     // TODO: add properties relating drink type with CSS class (see Part B, 6)
