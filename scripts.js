@@ -17,6 +17,7 @@ let colorClasses = {
 /** WINDOW LOAD LISTENER **/
 window.addEventListener("load", function() {
     // TODO: call fetch function for drinks (see Part A, 3)
+    fetchDrinks();
     // Note: init() should be called at the end of fetchCategories() to make sure fetched data has returned from the API before the page is rendered. Each fetch function is chained to another this way.
 });
 

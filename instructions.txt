@@ -14,9 +14,9 @@ This app utilizes TheCocktailDB; details are here: https://www.thecocktaildb.com
 
 1. In the <head> of index.html, un-comment the <script> element so your page can access the JavaScript code. - DONE
 
-2. At the very top of scripts.js, initialize three empty arrays called categories, allDrinks, and currentDrinks.
+2. At the very top of scripts.js, initialize three empty arrays called categories, allDrinks, and currentDrinks. - DONE
 
-3. In the window load listener toward the top, call the fetchDrinks() function, which has already been written. It will call the fetchCategories() function in turn.
+3. In the window load listener toward the top, call the fetchDrinks() function, which has already been written. It will call the fetchCategories() function in turn. - DONE
 
 4. Below the fetchDrinks() function (which is below init()), write the fetchCategories() function to go get the data needed to create a list of categories that will be used to populate the dropdown field in the form. Console.log the JSON and open the console in dev tools so that you can confirm the data has arrived properly when the page loads.
 
