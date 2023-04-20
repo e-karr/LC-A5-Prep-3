@@ -29,6 +29,10 @@ function init() {
     // FORM
     // TODO: Add searchArea object (see Part D, 2a)
     // TODO: Add keywordInput, categoryInput, submitButton, and resetButton (see Part B, 1a)
+    const keywordInput = document.getElementById('keyword-input');
+    const categoryInput = document.getElementById('category-input');
+    const submitButton = document.getElementById('submit-button');
+    const resetButton = document.getElementById('reset-button');
 
     // BELOW FORM
     // TODO: Add resultsArea object (see Part D, 2a)
