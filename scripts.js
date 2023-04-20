@@ -141,17 +141,17 @@ function fetchDrinks() {
 }
 
 // Get all possible categories from API, needed for Category dropdown input
-function fetchCategories() {
+async function fetchCategories() {
     // TODO: fetch the list of categories from the API, put each string into our global categories array, then call init() (see Part A, 4-6)
-    fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list").then( function(response) {
-        response.json().then( function(json) {
-            let categoryObjects = json.drinks;
-            categories = categoryObjects.map(category => category.strCategory.split(" / ").join("/"));
-            categories.sort();
-            console.log("Categories loaded.");
-            init();       
-        });
-    });
+    let response = await fetch("https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list")
+    let jsonData = await response.json()
+    // console.log(jsonData); // confirm correct information was fetched
+    let categoryObjects = jsonData.drinks;
+    categories = categoryObjects.map(category => category.strCategory.split(" / ").join("/"));
+    categories.sort();
+    // console.log(categories);
+    console.log("Categories loaded.");
+    init();       
 }
 
 /** SET HTML **/

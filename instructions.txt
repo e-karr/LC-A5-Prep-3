@@ -18,16 +18,16 @@ This app utilizes TheCocktailDB; details are here: https://www.thecocktaildb.com
 
 3. In the window load listener toward the top, call the fetchDrinks() function, which has already been written. It will call the fetchCategories() function in turn. - DONE
 
-4. Below the fetchDrinks() function (which is below init()), write the fetchCategories() function to go get the data needed to create a list of categories that will be used to populate the dropdown field in the form. Console.log the JSON and open the console in dev tools so that you can confirm the data has arrived properly when the page loads.
+4. Below the fetchDrinks() function (which is below init()), write the fetchCategories() function to go get the data needed to create a list of categories that will be used to populate the dropdown field in the form. Console.log the JSON and open the console in dev tools so that you can confirm the data has arrived properly when the page loads. - DONE
 
 5. Once you've confirmed the data, add code to retrieve the category of each object and place each string into the new categories array you created. Bonus: replace any instances of " / " with "/" so they read better.
 Temporarily console.log categories after looping through to confirm all the strings are there as expected. You should see the following: 
 
     ["Beer", "Cocktail", "Cocoa", "Coffee/Tea", "Homemade Liqueur", "Milk/Float/Shake", "Ordinary Drink", "Other/Unknown", "Punch/Party Drink", "Shot", "Soft Drink/Soda"]
 
-Congrats! You should now have all the drinks and all the categories being fetched from the API.
+Congrats! You should now have all the drinks and all the categories being fetched from the API. - DONE
 
-6. Don't forget to call init() from the fetchCategories() function - and it's important where you place it to ensure the page doesn't continue to load until the data has been received. (This will not be the same as the way fetchCategories() has been called from fetchDrinks().)
+6. Don't forget to call init() from the fetchCategories() function - and it's important where you place it to ensure the page doesn't continue to load until the data has been received. (This will not be the same as the way fetchCategories() has been called from fetchDrinks().) - DONE
 
 
 **** PART B: CREATE OBJECTS & LISTENERS ****
