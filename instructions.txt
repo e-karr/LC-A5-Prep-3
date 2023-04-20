@@ -36,7 +36,7 @@ Congrats! You should now have all the drinks and all the categories being fetche
     a) First get the ones inside the form (except type-input) and call them keywordInput, categoryInput, submitButton, and resetButton. - DONE
     b) Then get some of the ones below the form -- call them searchResults, noResults, and noResultsText. -DONE
     
-2. Just below that, populate the Category dropdown by setting its innerHTML using the setCategoryOptions() function that has already been prepared for you. If done correctly, when the page reloads you'll have a working dropdown!
+2. Just below that, populate the Category dropdown by setting its innerHTML using the setCategoryOptions() function that has already been prepared for you. If done correctly, when the page reloads you'll have a working dropdown! - DONE
 
 3. Now it's time to get our listeners in place. The first is for the submit button.
     a) The first thing needed is an object, called typeInput, representing the checked radio button. We can't put this with the other objects at the top of init() because we don't yet know which one will be checked when Submit is clicked and we have to store that specific button in typeInput. If it were declared with the others outside the submit button listener, it would get an initial value of null and never change.

@@ -44,7 +44,7 @@ function init() {
 
     /** POPULATE DROPDOWN INPUT WITH FETCHED DATA **/
     // TODO: Set innerHTML of dropdown box (see Part B, 2)
-
+    categoryInput.innerHTML = setCategoryOptions();
     // TODO: Copy in initial triggers for animations (see Part D, 2c)
 
     /** LISTEN FOR EVENTS **/
