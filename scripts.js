@@ -37,6 +37,9 @@ function init() {
     // BELOW FORM
     // TODO: Add resultsArea object (see Part D, 2a)
     // TODO: Add searchResults, noResults, and noResultsText (see Part B, 1b)
+    const searchResults = document.getElementById('search-results');
+    const noResults = document.getElementById('no-results');
+    const noResultsText = document.getElementById('no-results-text');
     // TODO: Add emptyGlass object (see Part D, 2a)
 
     /** POPULATE DROPDOWN INPUT WITH FETCHED DATA **/

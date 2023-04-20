@@ -34,7 +34,7 @@ Congrats! You should now have all the drinks and all the categories being fetche
 
 1. Add objects that will link to elements in index.html.
     a) First get the ones inside the form (except type-input) and call them keywordInput, categoryInput, submitButton, and resetButton. - DONE
-    b) Then get some of the ones below the form -- call them searchResults, noResults, and noResultsText.
+    b) Then get some of the ones below the form -- call them searchResults, noResults, and noResultsText. -DONE
     
 2. Just below that, populate the Category dropdown by setting its innerHTML using the setCategoryOptions() function that has already been prepared for you. If done correctly, when the page reloads you'll have a working dropdown!
 
