@@ -41,15 +41,15 @@ Congrats! You should now have all the drinks and all the categories being fetche
 3. Now it's time to get our listeners in place. The first is for the submit button.
     a) The first thing needed is an object, called typeInput, representing the checked radio button. We can't put this with the other objects at the top of init() because we don't yet know which one will be checked when Submit is clicked and we have to store that specific button in typeInput. If it were declared with the others outside the submit button listener, it would get an initial value of null and never change. - DONE
     b) Now before we add anything else to the listener itself, let's go down to the function called handleSubmitClick(). There are several steps to put in place here before we can call it in the listener.
-        1) Give currentDrinks the value of allDrinks. Use .slice() to ensure it is a separate array and not just a reference to allDrinks - we need that data to stay intact since we are about to use the user's input to filter down currentDrinks.
-        2) Call filterDrinks() and pass in the type (which will be passed into handleSubmitClick()), the keywordInput, and the categoryInput. If the user has selected any of these filters, the contents of currentDrinks will change.
+        1) Give currentDrinks the value of allDrinks. Use .slice() to ensure it is a separate array and not just a reference to allDrinks - we need that data to stay intact since we are about to use the user's input to filter down currentDrinks. - DONE
+        2) Call filterDrinks() and pass in the type (which will be passed into handleSubmitClick()), the keywordInput, and the categoryInput. If the user has selected any of these filters, the contents of currentDrinks will change. - DONE
         3) Now we have two possible situations - either currentDrinks still holds drink objects that can be displayed to the user, OR their filter(s) didn't produce any matches, in which case currentDrinks is now empty. If there ARE results to display, do the following:
-            - Call sortByName() and pass in the currentDrinks array and its starting and ending indices. This will put all the results in order alphabetically by the name of the drink.
-            - Set the innerHTML of searchResults by calling setRecipeCards() (scroll down to inspect it so you understand how the HTML is being built and returned).
-            - Set the style property 'display' of noResults to "none" so that the glass image and the text below it will disappear before the recipe cards display.
-        However, if there are NOT any results, you should simply set the innerHTML of noResultsText to "No results found. Try again!"
-    c) Go back up to your submit button event listener. Now you can call the function handleSubmitClick() and pass in typeInput as the parameter (since the handler is outside the listener and doesn't have access to it otherwise). 
-    d) The last thing you need in the listener is to prevent the browser from reloading the page.
+            - Call sortByName() and pass in the currentDrinks array and its starting and ending indices. This will put all the results in order alphabetically by the name of the drink. - DONE
+            - Set the innerHTML of searchResults by calling setRecipeCards() (scroll down to inspect it so you understand how the HTML is being built and returned). - DONE
+            - Set the style property 'display' of noResults to "none" so that the glass image and the text below it will disappear before the recipe cards display. - DONE
+        However, if there are NOT any results, you should simply set the innerHTML of noResultsText to "No results found. Try again!" - DONE
+    c) Go back up to your submit button event listener. Now you can call the function handleSubmitClick() and pass in typeInput as the parameter (since the handler is outside the listener and doesn't have access to it otherwise). - DONE
+    d) The last thing you need in the listener is to prevent the browser from reloading the page. - DONE
 
 4. Let's look at the reset button event listener. We will actually call the function handleResetClick() in a minute, but first we need to go add its code.
     a) Go down to handleResetClick(). When the button is clicked, we need several things to happen. 

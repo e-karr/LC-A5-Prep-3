@@ -48,12 +48,14 @@ function init() {
     // TODO: Copy in initial triggers for animations (see Part D, 2c)
 
     /** LISTEN FOR EVENTS **/
-    submitButton.addEventListener("click", () => {    
+    submitButton.addEventListener("click", (event) => {    
         // TODO: Add typeInput object to get the clicked radio button (see Part B, 3a)
         let typeInput = document.querySelector("input[name=type-input]:checked");
         // TODO: Validate the type and keyword inputs (see Part B, 5)
         // TODO: Call the handler function (see Part B, 3c)
+        handleSubmitClick(typeInput.value);
         // TODO: Prevent the default page reload (see Part B, 3d)
+        event.preventDefault();
     });
 
     resetButton.addEventListener("click", () => {
@@ -67,19 +69,23 @@ function init() {
     function handleSubmitClick(type) {       
         // TODO: Call the resetResultsArea() function (see Part D, 2f)
         // TODO: Give currentDrinks all of the objects from allDrinks (see Part B, 3b-1)
-        // TODO: Call filterDrinks and pass in the three input values (see Part B, 3b-2)     
+        currentDrinks = allDrinks.slice();
+        // TODO: Call filterDrinks and pass in the three input values (see Part B, 3b-2)  
+        filterDrinks(type, keywordInput, categoryInput);   
         if (currentDrinks.length > 0) {
             // TODO: alphabetize results by name of drink - see sort function at bottom (see Part B, 3b-3)
-            
+            sortByName(currentDrinks, 0, currentDrinks.lenght - 1);
             // Update values
             // TODO: add the recipe cards to the innerHTML of searchResults
+            searchResults.innerHTML = setRecipeCards();
             // TODO: change the value of 'display' for noResults to hide it
-            
+            noResults.style.display = "none";
             // Trigger animations
             // TODO: Add setTimeout function with fadeInResultsArea() (see Part D, 2f)
         } else {
             // Update values
             // TODO: Change the value of the innerHTML for noResultsText (see Part B, 3b-3)
+            searchResults.innerHTML = "No results found. Try again!";
             // Trigger animations
             // TODO: Call handleResetClick() (see Part D, 2f)         
         }
