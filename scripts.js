@@ -64,18 +64,12 @@ function init() {
         // TODO: Validate the type and keyword inputs (see Part B, 5)
         if (!typeInput) {
             alert('Please select alcoholic, non-alcoholic, or both.');
-            return
-        } 
-        
-        if (!regEx.test(keywordInput.value)) {
+        } else if (keywordInput.value !== "" && !regEx.test(keywordInput.value.trim())) {
             alert('Please enter a single keyword with only letters and/or numbers.');
-            return
-        } 
-
-        // TODO: Call the handler function (see Part B, 3c)
-        handleSubmitClick(typeInput.value);
-        
-        
+        } else {
+            // TODO: Call the handler function (see Part B, 3c)
+            handleSubmitClick(typeInput);
+        }
         // TODO: Prevent the default page reload (see Part B, 3d)
         event.preventDefault();
     });
@@ -85,11 +79,14 @@ function init() {
         if (currentDrinks.length > 0) {
             noResultsText.innerHTML = "Ready for a new search?"
             handleResetClick();
-        } else if (currentDrinks.length === 0 && noResultsText.innerHTML !== "Search for recipes above!") {
-            noResultsText.innerHTML = "Ready for a new search?";
-        }
+        } else {
+            if (noResultsText.innerHTML !== "Search for recipes above!") {
+                noResultsText.innerHTML = "Ready for a new search?";
+            }
+            spinGlass("click");
+        } 
         // TODO: Add spinGlass("click") to the condition that currentDrinks is empty (see Part D, 2d)
-        spinGlass("click");
+        
     });
 
     // TODO: Add listener for empty glass image (see Part D, 2e)
@@ -103,11 +100,12 @@ function init() {
         resetResultsArea();
         // TODO: Give currentDrinks all of the objects from allDrinks (see Part B, 3b-1)
         currentDrinks = allDrinks.slice();
+        console.log(currentDrinks);
         // TODO: Call filterDrinks and pass in the three input values (see Part B, 3b-2)  
-        filterDrinks(type, keywordInput, categoryInput);   
+        filterDrinks(type.value, keywordInput.value, categoryInput.value);   
         if (currentDrinks.length > 0) {
             // TODO: alphabetize results by name of drink - see sort function at bottom (see Part B, 3b-3)
-            sortByName(currentDrinks, 0, currentDrinks.lenght - 1);
+            sortByName(currentDrinks, 0, currentDrinks.length - 1);
             // Update values
             // TODO: add the recipe cards to the innerHTML of searchResults
             searchResults.innerHTML = setRecipeCards();
@@ -121,7 +119,7 @@ function init() {
         } else {
             // Update values
             // TODO: Change the value of the innerHTML for noResultsText (see Part B, 3b-3)
-            searchResults.innerHTML = "No results found. Try again!";
+            noResultsText.innerHTML = "No results found. Try again!";
             // Trigger animations
             // TODO: Call handleResetClick() (see Part D, 2f) 
             handleResetClick();       
@@ -212,6 +210,7 @@ function fetchDrinks() {
             });
         });
     }
+    console.log("Drinks loaded.");
     fetchCategories();
 }
 
