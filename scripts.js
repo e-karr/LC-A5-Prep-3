@@ -48,12 +48,20 @@ function init() {
     // TODO: Copy in initial triggers for animations (see Part D, 2c)
 
     /** LISTEN FOR EVENTS **/
-    submitButton.addEventListener("click", (event) => {    
+    submitButton.addEventListener("click", (event) => {   
+        let regEx =  /^[A-Za-z0-9\-]+$/;
         // TODO: Add typeInput object to get the clicked radio button (see Part B, 3a)
         let typeInput = document.querySelector("input[name=type-input]:checked");
         // TODO: Validate the type and keyword inputs (see Part B, 5)
-        // TODO: Call the handler function (see Part B, 3c)
-        handleSubmitClick(typeInput.value);
+        if (!typeInput) {
+            alert('Please select alcoholic, non-alcoholic, or both.')
+        } else if (keywordInput.value !== regEx) {
+            alert('Please enter a single keyword with only letters and/or numbers.');
+        } else {
+            // TODO: Call the handler function (see Part B, 3c)
+            handleSubmitClick(typeInput.value);
+        }
+        
         // TODO: Prevent the default page reload (see Part B, 3d)
         event.preventDefault();
     });
