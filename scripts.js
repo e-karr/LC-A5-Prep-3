@@ -59,7 +59,13 @@ function init() {
     });
 
     resetButton.addEventListener("click", () => {
-        // TODO: Change the value of noResultsText and call the handler for the reset button depending on the value of currentDrinks (see Part B, 4b) 
+        // TODO: Change the value of noResultsText and call the handler for the reset button depending on the value of currentDrinks (see Part B, 4b)
+        if (currentDrinks.length > 0) {
+            noResultsText.innerHTML = "Ready for a new search?"
+            handleResetClick();
+        } else if (currentDrinks.length === 0 && noResultsText.innerHTML !== "Search for recipes above!") {
+            noResultsText.innerHTML = "Ready for a new search?";
+        }
         // TODO: Add spinGlass("click") to the condition that currentDrinks is empty (see Part D, 2d)
     });
 

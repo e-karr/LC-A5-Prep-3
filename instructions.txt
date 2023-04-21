@@ -58,8 +58,8 @@ Congrats! You should now have all the drinks and all the categories being fetche
         3) Reset the innerHTML of searchResults to be an empty string. - DONE
         4) Set the style property 'display' of noResults to "block" so that the glass and the message below it will be visible again. - DONE
     b) Go back to the reset button event listener. 
-        1) If currentDrinks is not empty, reset the innerHTML of noResultsText to be "Ready for a new search?" and then call the function handleResetClick().
-        2) Otherwise, if currentDrinks is empty, and if the current innerHTML of noResultsText isn't its starting value ("Search for recipes above!"), reset the innerHTML of noResultsText to be "Ready for a new search?")
+        1) If currentDrinks is not empty, reset the innerHTML of noResultsText to be "Ready for a new search?" and then call the function handleResetClick(). - DONE
+        2) Otherwise, if currentDrinks is empty, and if the current innerHTML of noResultsText isn't its starting value ("Search for recipes above!"), reset the innerHTML of noResultsText to be "Ready for a new search?") - DONE
 
 5. We need to validate the user input for the submit button. Go to its event listener.
     a) If the user forgets to select a radio button, raise an alert message and then make sure the handler isn't called.
