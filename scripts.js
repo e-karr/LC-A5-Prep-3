@@ -100,9 +100,10 @@ function init() {
         resetResultsArea();
         // TODO: Give currentDrinks all of the objects from allDrinks (see Part B, 3b-1)
         currentDrinks = allDrinks.slice();
-        console.log(currentDrinks);
+        
         // TODO: Call filterDrinks and pass in the three input values (see Part B, 3b-2)  
-        filterDrinks(type.value, keywordInput.value, categoryInput.value);   
+        filterDrinks(type.value, categoryInput.value, keywordInput.value);   
+        console.log(currentDrinks);
         if (currentDrinks.length > 0) {
             // TODO: alphabetize results by name of drink - see sort function at bottom (see Part B, 3b-3)
             sortByName(currentDrinks, 0, currentDrinks.length - 1);
