@@ -12,6 +12,9 @@ let currentDrinks = [];
 
 let colorClasses = {
     // TODO: add properties relating drink type with CSS class (see Part B, 6)
+    "alcoholic": "alcohol",
+    "non alcoholic": "no-alcohol",
+    "optional alcohol": "optional"
 }
 
 /** WINDOW LOAD LISTENER **/

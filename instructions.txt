@@ -65,7 +65,7 @@ Congrats! You should now have all the drinks and all the categories being fetche
     a) If the user forgets to select a radio button, raise an alert message and then make sure the handler isn't called. - DONE
     b) If the user enters a keyword but there is something other than alphanumeric characters or a hyphen, raise an alert message and then make sure the handler isn't called. The RegEx match for this is /^[A-Za-z0-9\-]+$/ - DONE
 
-6. One last thing - one of the color blocks on the recipe card is meant to be variable. Add the following to the top of scripts.js to connect the category values to the CSS classes:
+6. One last thing - one of the color blocks on the recipe card is meant to be variable. Add the following to the top of scripts.js to connect the category values to the CSS classes: - DONE
     "alcoholic": "alcohol",
     "non alcoholic": "no-alcohol",
     "optional alcohol": "optional"
