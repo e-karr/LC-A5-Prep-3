@@ -84,13 +84,13 @@ Everything in styles.css has been prepared for you - just un-comment the three <
 
 2. Go to scripts.js.
 
-    a) Add objects representing the #search-area and #results-area divs and the #empty-glass image to the lists of objects at the beginning of the init() function where indicated by the TODOs.
+    a) Add objects representing the #search-area and #results-area divs and the #empty-glass image to the lists of objects at the beginning of the init() function where indicated by the TODOs. - DONE
 
         const searchArea = document.getElementById("search-area");
         const resultsArea = document.getElementById("results-area");
         const emptyGlass = document.getElementById("empty-glass");
 
-    b) Add the following just after the handleResetClick() function at the end of init()):
+    b) Add the following just after the handleResetClick() function at the end of init()): - DONE
 
         /** TRIGGER AND RESET ANIMATIONS AS NEEDED **/
         function fadeInSearchBox() {
@@ -114,18 +114,18 @@ Everything in styles.css has been prepared for you - just un-comment the three <
         };
 
     c) Add the following inside init(), just after the dropdown population with
-    categoryInput.innerHTML = setCategoryOptions():
+    categoryInput.innerHTML = setCategoryOptions(): - DONE
 
         /** MAKE SEARCH AREA & RESULTS AREA VISIBLE UPON LOAD **/
         fadeInSearchBox();
         fadeInResultsArea();
         spinGlass("zoom");
 
-    d) In the reset button event listener, add the following to the condition that currentDrinks is empty:
+    d) In the reset button event listener, add the following to the condition that currentDrinks is empty: - DONE
 
         spinGlass("click");
 
-    e) Just below the rest button event listener, add a new event listener for the empty glass image by pasting in the following:
+    e) Just below the rest button event listener, add a new event listener for the empty glass image by pasting in the following: - DONE
 
         emptyGlass.addEventListener("click", () => {
             spinGlass("click");
