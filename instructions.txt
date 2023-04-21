@@ -73,7 +73,7 @@ Congrats! You should now have all the drinks and all the categories being fetche
 
 *** PART C: STYLE IT UP ****
 
-Everything in styles.css has been prepared for you - just un-comment the three <link> elements in the <head> of index.html to link both it and the Google fonts. Et voilà!
+Everything in styles.css has been prepared for you - just un-comment the three <link> elements in the <head> of index.html to link both it and the Google fonts. Et voilà! - DONE
 
 
 **** PART D: ADD ANIMATIONS ****
