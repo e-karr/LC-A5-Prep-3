@@ -58,7 +58,7 @@ function init() {
         // TODO: Validate the type and keyword inputs (see Part B, 5)
         if (!typeInput) {
             alert('Please select alcoholic, non-alcoholic, or both.')
-        } else if (keywordInput.value !== regEx) {
+        } else if (!regEx.test(keywordInput.value)) {
             alert('Please enter a single keyword with only letters and/or numbers.');
         } else {
             // TODO: Call the handler function (see Part B, 3c)

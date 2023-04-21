@@ -79,8 +79,8 @@ Everything in styles.css has been prepared for you - just un-comment the three <
 **** PART D: ADD ANIMATIONS ****
 
 1. Go to styles.css. 
-    a) Un-comment the display and animation properties of both #search-area and #results-area. 
-    b) At the very bottom, uncomment all @keyframes.
+    a) Un-comment the display and animation properties of both #search-area and #results-area. - DONE
+    b) At the very bottom, uncomment all @keyframes. - DONE
 
 2. Go to scripts.js.
 
