@@ -93,6 +93,9 @@ function init() {
     function handleResetClick() { 
         // Update values
         // TODO: Reset currentDrinks, searchResults, and noResults (see Part B, 4a, 2-4) 
+        currentDrinks = [];
+        searchResults.innerHTML = "";
+        noResults.style.display = "block";
         // Trigger animations
         // TODO: Call three functions (see Part D, 2g)
     };
