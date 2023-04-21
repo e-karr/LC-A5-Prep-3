@@ -31,6 +31,7 @@ function init() {
 
     // FORM
     // TODO: Add searchArea object (see Part D, 2a)
+    const searchArea = document.getElementById("search-area");
     // TODO: Add keywordInput, categoryInput, submitButton, and resetButton (see Part B, 1a)
     const keywordInput = document.getElementById('keyword-input');
     const categoryInput = document.getElementById('category-input');
@@ -39,11 +40,13 @@ function init() {
 
     // BELOW FORM
     // TODO: Add resultsArea object (see Part D, 2a)
+    const resultsArea = document.getElementById("results-area");
     // TODO: Add searchResults, noResults, and noResultsText (see Part B, 1b)
     const searchResults = document.getElementById('search-results');
     const noResults = document.getElementById('no-results');
     const noResultsText = document.getElementById('no-results-text');
     // TODO: Add emptyGlass object (see Part D, 2a)
+    const emptyGlass = document.getElementById("empty-glass");
 
     /** POPULATE DROPDOWN INPUT WITH FETCHED DATA **/
     // TODO: Set innerHTML of dropdown box (see Part B, 2)
